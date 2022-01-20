@@ -28,4 +28,28 @@ export class BaseClass implements IBaseClass {
     }
     return data;
   }
+
+  // *********************
+  // Utils Function
+  // *********************
+
+  isObject(obj: string) {
+    return Object.prototype.toString.call(obj) === "[object Object]";
+  }
+
+  isArray(arr: string) {
+    return Array.isArray(arr);
+  }
+
+  isString(str: string) {
+    return typeof str === "string";
+  }
+
+  isNumber(num: string) {
+    return typeof num === "number";
+  }
+
+  isBoolean(flag: string) {
+    return typeof flag === "boolean";
+  }
 }
